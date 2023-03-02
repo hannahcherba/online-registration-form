@@ -1,0 +1,183 @@
+/* Global Layout Set-up 
+---------------------------------*/
+* { 
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Source Code Pro', monospace, Arial, 
+    Helvetica, sans-serif;
+    background-color:#ddeef3;
+    color: rgb(55, 66, 83);
+    margin: 0px;
+    padding: 0px;
+
+}
+
+  /* Section Style
+----------------------------------- */
+Header {
+  display: flex;
+  background-color: rgb(55, 66, 83);
+  color: white;
+  justify-content:space-around;
+  margin: 0px;
+  padding: 5px;
+  font-size: 12px;
+}
+section.newsletter-signup {
+  max-width: 100%;
+  padding: 35px 5px 20px;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-size: 19px;
+}
+section.newsletter-signup p {
+  max-width: 85%;
+    font-size: 12px;
+}
+section.newsletter-signup p, footer {
+  color:rgb(148, 154, 162);
+}
+section.newsletter-signup h2, section.newsletter-signup p {
+  text-align: center;
+}
+main {
+  padding: 10px;
+}
+main, footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.newsletter-signup, form, fieldset, legend, div.con {
+  display: flex;
+  flex-direction: column;
+}
+fieldset {
+  flex-wrap: wrap;
+  border: 0;
+}
+legend.extra-margin {
+  margin-top: 40px;
+}
+section.for-border, legend.extra-margin h2 {
+  margin-top: 40px;
+}
+div.thick-border {
+  border-bottom: 3.5px solid rgb(55, 66, 83);
+  margin: 2px;
+}
+section.border, section.for-border{
+  border-top: 2px solid rgb(55, 66, 83);
+}
+hr {
+  border: 1px solid rgb(55, 66, 83);
+  width: 100%;
+  margin: 35px 0px 25px;
+}
+input, #state {
+  border: none; 
+  padding: 10px;
+
+}
+label {
+  padding: 10px 0px;
+}
+div.con {
+  justify-content: space-between;
+}
+.contact {
+  height: 45px; 
+}
+/* Found info on 'invalid' from user AuRise: https://stackoverflow.com/questions/13694271/modify-select-so-only-the-first-one-is-gray */
+select:invalid, select option[value=""] {
+  color: #999999;
+  font-style: italic;
+}
+#name::placeholder, #email::placeholder {
+  text-indent: 75%;
+}
+#name::placeholder, #email::placeholder, #phone::placeholder {
+  opacity: .75;
+  font-style: italic;
+}
+input, button, #opinion, #state {
+  border-radius: 5px;
+}
+input:focus, select:focus, textarea:focus {
+  background-color:rgb(242, 223, 210)
+}
+#html, #css, #js, #html-radio, #plain-radio {
+  max-width: 13px;
+}
+div.check {
+  padding-bottom: 20px;
+}
+#opinion {
+  padding: 35px;
+  border: none;
+  margin: 15px 0px 10px;
+  width: 100%;
+}
+button {
+  border: none;
+  padding: 15px;
+  background-color: rgb(111, 204, 238);
+  color: white;
+  font-size: 18px;
+}
+button:hover, input:hover, #opinion:hover, textarea:hover {
+  border: 1px solid rgb(244, 218, 196);
+  box-shadow: 1px 2px 4px rgb(148, 154, 162);
+}
+button:hover {
+  border: 1px solid rgb(16, 191, 231);
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
+}
+
+/* Placeholder text adjustment for medium screens
+---------------------------------------------- */
+
+@media screen and (min-width:432px) {
+
+  #name::placeholder, #email::placeholder {
+    text-indent: 85%;
+  }
+}
+
+/* For larger screens 768px or larger
+-------------------------------- */
+
+@media screen and (min-width:768px) {
+
+    form {
+      max-width: 60%;
+    }
+    div.con {
+      display: flex;
+      flex-direction:row;
+      justify-content: space-between;
+      height: 65px;
+    }
+    .contact {
+      width: 70%;
+      height: 45px; 
+    }
+    #name::placeholder, #email::placeholder {
+      text-indent: 75%;
+    }
+}
+
+/* For larger screens 990px or larger
+-------------------------------- */ 
+
+@media screen and (min-width:990px) {
+  #name::placeholder, #email::placeholder {
+    text-indent: 85%;
+  }
+}
