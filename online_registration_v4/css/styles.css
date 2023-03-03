@@ -129,14 +129,23 @@ button {
   color: white;
   font-size: 18px;
 }
-button, input, #opinion, textarea, select#state {
+button, input, #opinion, textarea {
   transition-property: background-color color font-size;
   transition-duration: 1s;
 }
-button:hover, input:hover, #opinion:hover, textarea:hover, select#state:hover {
+button:hover, input:hover, #opinion:hover, textarea:hover {
   background-color:rgb(244, 218, 196);
   color: rgb(16, 191, 231);
   font-size: 20px;
+  box-shadow: 1px 2px 4px rgb(148, 154, 162);
+}
+select#state {
+  transition-property: background-color color;
+  transition-duration: 1s;
+}
+select#state:hover {
+  background-color:rgb(244, 218, 196);
+  color: rgb(16, 191, 231);
   box-shadow: 1px 2px 4px rgb(148, 154, 162);
 }
 
