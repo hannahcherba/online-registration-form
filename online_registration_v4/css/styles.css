@@ -100,7 +100,7 @@ select:invalid, select option[value=""] {
   text-indent: 75%;
 }
 #name::placeholder, #email::placeholder, #phone::placeholder, #address::placeholder,
-#city::placeholder, #zip::placeholder {
+#city::placeholder, #zip::placeholder, #opinion::placeholder {
   opacity: .75;
   font-style: italic;
 }
@@ -130,7 +130,7 @@ button {
   font-size: 18px;
 }
 button, input, #opinion, textarea {
-  transition-property: background-color color font-size;
+  transition-property: background-color, color, font-size;
   transition-duration: 1s;
 }
 button:hover, input:hover, #opinion:hover, textarea:hover {
@@ -140,7 +140,7 @@ button:hover, input:hover, #opinion:hover, textarea:hover {
   box-shadow: 1px 2px 4px rgb(148, 154, 162);
 }
 select#state {
-  transition-property: background-color color;
+  transition-property: background-color, color;
   transition-duration: 1s;
 }
 select#state:hover {
