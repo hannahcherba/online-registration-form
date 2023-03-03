@@ -99,8 +99,7 @@ select:invalid, select option[value=""] {
 #name::placeholder, #email::placeholder {
   text-indent: 75%;
 }
-#name::placeholder, #email::placeholder, #phone::placeholder, #address::placeholder,
-#city::placeholder, #zip::placeholder, #opinion::placeholder {
+input[placeholder], textarea[placeholder] {
   opacity: .75;
   font-style: italic;
 }
@@ -115,6 +114,9 @@ input#zip {
 }
 div.check {
   padding-bottom: 20px;
+}
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+  font-weight: bold;
 }
 #opinion {
   padding: 35px;
