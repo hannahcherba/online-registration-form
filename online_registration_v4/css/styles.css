@@ -99,15 +99,16 @@ select:invalid, select option[value=""] {
 #name::placeholder, #email::placeholder {
   text-indent: 75%;
 }
-#name::placeholder, #email::placeholder, #phone::placeholder {
+#name::placeholder, #email::placeholder, #phone::placeholder, #address::placeholder,
+#city::placeholder, #zip::placeholder {
   opacity: .75;
   font-style: italic;
 }
 input, button, #opinion, #state {
   border-radius: 5px;
 }
-input:focus, select:focus, textarea:focus {
-  background-color:rgb(242, 223, 210)
+input#zip {
+  max-width: 50%;
 }
 #html, #css, #js, #html-radio, #plain-radio {
   max-width: 13px;
@@ -128,16 +129,15 @@ button {
   color: white;
   font-size: 18px;
 }
-button:hover, input:hover, #opinion:hover, textarea:hover {
-  border: 1px solid rgb(244, 218, 196);
+button, input, #opinion, textarea, select#state {
+  transition-property: background-color color font-size;
+  transition-duration: 1s;
+}
+button:hover, input:hover, #opinion:hover, textarea:hover, select#state:hover {
+  background-color:rgb(244, 218, 196);
+  color: rgb(16, 191, 231);
+  font-size: 20px;
   box-shadow: 1px 2px 4px rgb(148, 154, 162);
-}
-button:hover {
-  border: 1px solid rgb(16, 191, 231);
-}
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px rgba(21, 156, 228, 0.4);
 }
 
 /* Placeholder text adjustment for medium screens
@@ -170,6 +170,10 @@ button:focus {
     }
     #name::placeholder, #email::placeholder {
       text-indent: 75%;
+    }
+    input#zip {
+      max-width: 25%;
+      margin-right: 45%;
     }
 }
 
